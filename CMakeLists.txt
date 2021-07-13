@@ -101,6 +101,8 @@ set(HEADER_FILES
         header/actor-zeta/detail/string_view.hpp
         header/actor-zeta/detail/type_list.hpp
         header/actor-zeta/detail/type_traits.hpp
+        header/actor-zeta/detail/rtt.hpp
+        header/actor-zeta/detail/rtt_management.hpp
 
         header/actor-zeta/executor/policy/profiled.hpp
         header/actor-zeta/executor/policy/unprofiled.hpp
@@ -188,7 +190,7 @@ if (ALLOW_TESTS)
     message("CONAN_BUILD_INFO_DIR = ${CMAKE_BINARY_DIR}")
     include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
     conan_basic_setup(TARGETS)
-    message(STATUS "LIBS = ${CONAN_LIBS}")
+    #message(STATUS "LIBS = ${CONAN_LIBS}")
     message(STATUS "CMAKE_BUILD_TYPE = ${CMAKE_BUILD_TYPE}")
 
     # conan
