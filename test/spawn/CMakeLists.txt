@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(project spawn)
+set(project spawn_test)
 
 if (CMAKE_VERSION VERSION_LESS 3.0)
     PROJECT(${project} CXX)

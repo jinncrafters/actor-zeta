@@ -1,21 +1,21 @@
 FROM ubuntu:bionic
 
-RUN    apt-get update
-    && apt-get upgrade -y
-    && apt-get install -y
-    \  apt-utils
-    \  gcc
-    \  g++
-    \  clang
-    \  clang-format
-    \  clang-tidy
-    \  openssh-server
-    \  cmake
-    \  build-essential
-    \  gdb
-    \  gdbserver
-    \  rsync
-    \  vim
+RUN    apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
+        apt-utils \
+        gcc \ 
+        g++ \
+        clang \
+        clang-format \
+        clang-tidy \
+        openssh-server \
+        cmake \
+        build-essential \
+        gdb \
+        gdbserver \
+        rsync \
+        vim
 
 ADD . /code
 WORKDIR /code

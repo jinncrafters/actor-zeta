@@ -75,15 +75,11 @@ build
 build.ninja
 compile_commands.json
 
+.DS_Store
+/cmake-build-debug/
+build
 tracy
-images
-models.zip
-build.sh
-configure.sh
-compile.sh
 compile_commands.json
-ocv
-local_dev
 *.vim
 *.tracy
 .cache
