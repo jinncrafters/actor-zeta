@@ -12,42 +12,7 @@
 #include <actor-zeta/detail/ref_counted.hpp>
 #include <actor-zeta/detail/string_view.hpp>
 #include <actor-zeta/forwards.hpp>
-/*
-namespace actor_zeta { namespace base {
 
-    struct identifier_t final {
-        using id_t = std::size_t;
-        using name_t = detail::string_view;
-        identifier_t(name_t name, id_t id)
-            : name_(std::move(name))
-            , id_(id) {}
-        identifier_t(name_t name)
-            : name_(std::move(name))
-            , id_(0) {}
-        const name_t name_;
-        const id_t id_;
-    };
-
-}} // namespace actor_zeta::base
-
-namespace std {
-
-    inline constexpr auto operator==(const actor_zeta::base::identifier_t& lhs, const actor_zeta::base::identifier_t& rhs) -> bool {
-        return std::tie(lhs.name_, lhs.id_) == std::tie(rhs.name_, rhs.id_);
-    }
-
-    inline constexpr auto operator!=(const actor_zeta::base::identifier_t& lhs, const actor_zeta::base::identifier_t& rhs) -> bool {
-        return !(lhs == rhs);
-    }
-
-    template<>
-    struct hash<actor_zeta::base::identifier_t> {
-        size_t operator()(const actor_zeta::base::identifier_t& key) const {
-            return std::hash<actor_zeta::base::identifier_t::name_t>()(key.name_) ^ std::hash<actor_zeta::base::identifier_t::id_t>()(key.id_);
-        }
-    };
-} // namespace std
-*/
 namespace actor_zeta { namespace base {
 
     using message_ptr = std::unique_ptr<message>;

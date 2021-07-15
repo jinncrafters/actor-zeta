@@ -37,11 +37,20 @@ namespace actor_zeta { namespace base {
 
         void swap(address_t& other);
 
+        bool operator==(const address_t& a) noexcept {
+            return ptr_ == a.ptr_;
+        }
+
         void* get() const;
 
     private:
         communication_module* ptr_;
     };
+
+
+    inline bool operator==(const address_t& lhs, const address_t& rhs) noexcept {
+        return lhs == rhs;
+    }
 
     static_assert(std::is_default_constructible<address_t>::value, "");
     static_assert(std::is_move_constructible<address_t>::value, "");

@@ -110,6 +110,9 @@ namespace actor_zeta { namespace base {
         auto address = actor_tmp->address();
         add_actor_impl(std::move(actor_tmp));
         link(*this, address);
+        if(this != current_message()->sender().get()){
+            link(current_message()->sender(),address);
+        }
     }
 
     auto supervisor_abstract::spawn_supervisor(default_spawn_supervisor& construct) -> void {
